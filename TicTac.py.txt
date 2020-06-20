@@ -1,0 +1,84 @@
+from IPython.display import clear_output
+def sss(val,mem):
+    print(f'sss called val and mem are {val},{mem}')
+    if val==1:
+        l1[1]=mem
+    elif val==2:
+        l1[5]=mem
+    elif val==3:
+        l1[9]=mem
+    elif val==4:
+        l2[1]=mem
+    elif val==5:
+        l2[5]=mem
+    elif val==6:
+        l2[9]=mem
+    elif val==7:
+        l3[1]=mem
+    elif val==8:
+        l3[5]=mem
+    elif val==9:
+        l3[9]=mem
+    return None
+    
+#def tictac()
+l1=['_','_','_','|','_','_','_','|','_','_','_']
+l2=['_','_','_','|','_','_','_','|','_','_','_']
+l3=[' ',' ',' ','|',' ',' ',' ','|',' ',' ',' ']
+game=''.join(l1)+'\n'+''.join(l2)+'\n'+''.join(l3)
+print('HI')
+print(game)
+repeat=''
+t=1
+
+while len(repeat)<9:
+    place=0
+    if t==1:
+        print('Lets start the game\n')
+    if t%2==0:
+        print("OOOOOO's TURN: Enter a value between 1 to 9")
+        place=int(input())
+        if str(place) not in repeat:
+            print(f'place is NOT in repeat-{place}')
+            clear_output(wait=True)
+            sss(place,'O')
+        else:
+            while str(place) in repeat:
+                print('place occupied please enter another value:')
+                place=int(input())
+                clear_output(wait=True)
+                print(f'OOOO turn-place is {place}')
+                sss(place,'O')
+                t=t+1
+                pass
+            
+    else:
+        print("XXXXXX's TURN: Enter a value between 1 to 9")
+        place=int(input())
+        if str(place) not in repeat:
+            print(f'place is not in repeat-{place}')
+            clear_output(wait=True)
+            sss(place,'X')
+        else:
+            while str(place) in repeat:
+                print('place occupied please enter another value:')
+                place=int(input())
+                clear_output(wait=True)
+                print(f'XXXX turn - place is {place}')
+                sss(place,'X')
+                t=t+1
+                pass
+            
+    game=''.join(l1)+'\n'+''.join(l2)+'\n'+''.join(l3)        
+    print(game)
+    repeat=repeat+(str(place))
+    print(f'Repeat value is:{repeat}')
+    print(f'Final place is {place}')
+    t+=1
+    
+if len(repeat)==9:
+    print('\n GAME IS COMPLETED-BE HAPPY')
+    
+    
+    
+
