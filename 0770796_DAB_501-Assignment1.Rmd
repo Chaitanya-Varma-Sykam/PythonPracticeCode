@@ -1,0 +1,225 @@
+---
+title: DAB_501-Assignment 1
+output: html_notebook
+---
+<br />
+
+## Task_1 :<br />
+**Identify 3 datasets as candidates for Project #1 and for each provide a brief description, including variables and variable types.<br /> (24 marks)**<br />
+
+# Dataset-1
+### Context: <br />
+
+
+The data set provides the information regarding the recent shootings occurred on US. These columns have the data of the person like
+name of the person who was shot their age,race,gender,if this person carrying any weapon, the state of their mental illness. This 
+also data regarding if the police has a camera on him and if the police.<br/> 
+
+Few key insights like if any particular race is being ill treated or the mindset and general weapon used by criminal can be derived 
+using the dataset.
+
+
+```{r}
+library("readxl",warn.conflicts = FALSE)
+x<-read_excel("E:\\St.Clair\\Basic Stats\\Assignments\\shootings.xlsx")
+x
+colnames(x)
+```
+
+
+### **The Columns:**
+
+1)  **id:**    (Format - Integer) - This Discreet data column gives the unique Identity for each person.  
+2)  **name:**  (Format - Character) - This is a nominal data which specifies the name of the person taken down.
+3)  **date:**  (Format - date yyyy-mm-dd) - The particular date on which the person was shot.
+4)  **armed:** (Format - Character) - This nominal data column provides details if the person is carrying any weapons.
+5)  **age:**   (Format - Integer) - Gives the age of the person who was shot.
+6)  **gender:**(Format - Character) - Gives the gender of the person who was shot.
+7)  **race:**  (Format- Character) - This is Nominal data denoting the race of the person who was shot.
+8)  **city:**  (Format- Character) - This column gives the information in which city this even took place.
+9)  **signs_of_mental_illness:**(Format - Logical) - This logical column denotes if the person is mentally sick or not.
+10) **threat_level:** (Format - Character) - threat_level column denotes the threat level of the person being shot.
+11) **body_camera:**  (Format- Logical) - This logical column denotes if the person is carrying a camera on him or not.
+12) **arms_category:**(Format- Character) - The nominal data in the column denotes the category of the weapon person is handling.
+<br />
+<br />
+
+# Dataset-2 <br />
+
+### Context: <br />
+The below dataset is part of a larger set. This gives the information about the cars which were kept on sale in craigslist which is one of the largest collection of used cars. It consist of all the major details like the car model, the year of manufacturing, number of kilometers the car has been driven and all.<br />
+
+Using this dataset one can analize and conclude the most profitable choice in order to get a own vehicle. 
+
+```{r}
+library("readxl",warn.conflicts = FALSE)
+y<-read_excel("E:\\St.Clair\\Basic Stats\\Assignments\\Used-Cars.xlsx")
+y
+colnames(y)
+```
+
+### **The Columns:**<br />
+
+1.) **Name**(Format - Character) - This column gives the name of the car that is for sale.<br />
+2.) **Location**(Format - Character) - This column gives the name of the city in which car is available sale.<br />
+3.) **Year**(Format - Double) - This column gives the year from which car is functional.<br />
+4.) **Kilometers_Driven**(Format - double) - This column gives the number of kilometers driven by the car.<br />
+5.) **Fuel_Type**(Format - Charecter) - This column gives the fule type used in the car.<br />
+6.) **Transmission**(Format - Charecter) - This column gives the gear transmission type of the car.<br />
+7.) **Mileage**(Format - Charecter) - This column gives the information about kilometers driven per liter.<br />
+8.) **Engine**(Format - Charecter) - This column represents the engine displacement of the car.<br />
+9.) **Power**(Format - Charecter) - This columns represents the power of the engive.<br />
+10.)**Seats**(Format - Double) - This column gives the number of seats prsent in the car.<br />
+
+
+
+
+
+
+# Dataset-3<br />
+
+### Context: <br />
+Using this dataset one can analize and conclude the most profitable choice in order to get a own vehicle. 
+The dataset is composed of the reviews and rating given by the users to the different books on sale in amazon online store. The books are catogarized into 3 different categories of hardcover, paperback and kindle online version. Key insights like which kind of book has been given more rating and preference, the price range towards people are inclined to. <br />
+
+```{r}
+library("readxl",warn.conflicts = FALSE)
+z<-read_excel("E:\\St.Clair\\Basic Stats\\Assignments\\prog_book.xlsx")
+z
+colnames(z)
+
+```
+### **The Columns:**<br /
+
+1.)**Rating**(Format - double) - This column gives the rating of the book provided by the user.<br />
+2.)**Reviews**(Format - double) - This column shows the review given by the used to the book.<br />
+3.)**Book_title**(Format - Character) - This column gives the Title of the book.<br />
+4.)**Description**(Format - Character) - This column gives the description of the book.<br />
+5.)**Number_Of_Pages**(Format - double) - This column gives the number if pages present in the book.<br />
+6.)**Type**(Format - Character) - This column gives whether the book is hardcover or paper or kindle.<br />
+7.)**Price**(Format - double) - This column gives  the price of the book.<br />
+<br />
+<br />
+<br />
+
+### Task_2<br />
+**Find an example of a good data visualization. (10 marks)**<br />
+**Cite the author and/or source of the visualization (provide a link, if applicable)**<br />
+**Provide at least 3 reasons why you consider this to be a good visualization**
+ <br />
+
+Data visualization is the practice of translating information into a visual context, such as a map or graph, to make data easier for the human brain to understand and pull insights from. The main goal of data visualization is to make it easier to identify patterns, trends and outliners in large datasets.
+
+![](daily-routines.png)
+<br />
+<br />
+The above visualization depicts the 24 hour schedule of the prominent creative people in the space one schedule have taken.<br />
+I personally believe this is a good visualization because of<br />
+<br />
+**1.)** More data has been represented using a suitable plot without data overloading.<br />
+<br />
+**2.)** Proper use of complimentary secondary colors with lesser hue makes this representation eye pleasing.<br />
+<br />
+**3.)** This chart is onto point simple and easy to uderstand.
+
+
+<br />
+
+
+### Task_3<br />
+**Find an example of a bad data visualization. (10 marks)**<br />
+**Cite the author and/or source of the visualization (provide a link, if applicable)**<br />
+**Provide at least 3 reasons why you consider this to be a bad visualization**<br />
+![](bad.jpg)
+
+<br />
+I believe this represents a bad visualization because of the reasons<br />
+**1.)** The plot selected does not properly convey the information visually creating an information overload.<br />
+<br />
+**2.)** The 3D representation of the pie chart makes it tough to differentiate between the boundaries of pies.<br />
+<br />
+**3.)** The color selection in transparent  plot makes it unpleasant to read data.
+<br />
+<br />
+<br />
+<br />
+
+### Task_4<br />
+**Using the gapminder data set (accessible in RStudio after running library(gapminder)), create a visualization that answers the following question: Has the world become a better place? (20 marks)
+Instead of the gapminder data provided, you may also use relevant data from the gapminder website.**
+
+The below graphs are plotted using the data provided in the gapminder dataset
+```{r,message=FALSE}
+
+avgLE<- gapminder %>% group_by(year) %>%  summarize(Avg_LifeExp=mean(lifeExp))
+TLE<-ggplot(avgLE,mapping = aes(x = year, y = Avg_LifeExp))+
+  geom_line(colour="black",size=1)+
+  geom_point(colour="red",fill="black",size=5)+
+theme_linedraw()+
+  labs(x="Year",Y="Avg_LifeExp", title="Overall Growth of Avg_LifeExp in world between 1982 - 2007")
+
+avgGDP3<- gapminder %>% group_by(year) %>%  summarize(Avg_GDP4=mean(gdpPercap))
+TGDP<-ggplot(avgGDP3,mapping = aes(x = year, y =Avg_GDP4))+
+  geom_line(colour="black",size=1)+
+  geom_point(colour="red",fill="black",size=5)+
+theme_linedraw()+
+  labs(x="Year",Y="Avg_LifeExp", title="Overall Growth of GDP of world between 1982 - 2007")
+
+grid.arrange(TLE, TGDP, nrow = 1)
+
+```
+
+
+The above graphs clearly illustrate that the Average Life Expectancy and Average GDP were increasing with a positive slope all along the history. Average life expectancy and GDP are few of the indicators which are directly proportional to the development of the world. Even though the growth is a little is slow in continents like Africa and Ocenica, It is evident that the average life expectancy is increasing gradually over the period of time which indicates that the **world is becoming a better place.**
+<br />
+<br />
+
+```{r,message=FALSE}
+library(ggplot2,warn.conflicts = FALSE)
+library(tidyverse,warn.conflicts = FALSE)
+library(dplyr,warn.conflicts = FALSE)
+library(gridExtra,warn.conflicts = FALSE)
+library(gapminder)
+
+ avgLE<- gapminder %>% group_by(year,continent) %>%  summarize(Avg_LifeExp=mean(lifeExp))
+ggplot(avgLE,mapping = aes(x = year, y = Avg_LifeExp))+
+    geom_line(colour="black",size=0.5)+
+    geom_point(colour="red",fill="black",size=1)+
+    facet_wrap(~ continent, scales = "free_x")
+  
+  
+  avgGDP1<- gapminder %>% group_by(year,continent) %>%  summarize(Avg_GDP2=mean(gdpPercap))
+  ggplot(avgGDP1,mapping = aes(x = year, y = Avg_GDP2))+
+    geom_line(colour="black",size=0.5)+
+    geom_point(colour="red",fill="black",size=1)+
+    facet_wrap(~ continent, scales = "free_x")
+```
+<br />
+The above facets indicate the average growth of life expectancy and GDP over different continents. 
+<br />
+<br />
+### Submitted By: Chaitanya Sykam<br />
+### Student ID  : 0770796<br />
+### section     : 001<br />
+**email:W0770796@myscc.ca**<br />
+<br />
+<br />
+<br />
+
+### **========== THE - END ==========**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
