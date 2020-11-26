@@ -1,1 +1,7 @@
 This is my first test file for the git account
+
+
+This is my first test file for the git account
+This is my first test file for the git account
+the above lines are to check the commit and status after the changes are made to the file.
+iam happy as the day started as a productive one and my gut is feeling good and iam able to type faster today, I am planning to make noodle and eat after committing these changes.
